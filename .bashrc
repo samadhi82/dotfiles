@@ -23,6 +23,7 @@ alias root="sudo su"
 alias spdtst="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 alias timeupd="sudo service ntp stop && sudo ntpdate pool.ntp.org && sudo service ntp start"
 alias update="sudo apt-get update -y"
+alias upgrade="sudo apt-get upgrade"
 
 # Network Aliases
 alias getip="curl icanhazip.com"
