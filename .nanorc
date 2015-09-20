@@ -1,0 +1,12 @@
+# Mitch's custom Nano config
+
+#Turn on line numbering
+set const
+
+# Rebind keys to make things more mainframe oriented. 
+bind F1 writeout all
+bind F3 exit all
+bind F7 prevpage all
+bind F8 nextpage all
+bind ^X cut all
+bind ^V uncut all
