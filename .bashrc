@@ -1,6 +1,6 @@
 # Mitch's custom Bash prompt: Simple Version
 export PS1="\[\e[01;31m\]\u\[\e[0m\]\[\e[01;33m\]@\[\e[0m\]\[\e[01;36m\]\h\[\e[0m\]\[\e[01;33m\]:\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;35m\]\w\[\e[0m\]\[\e[01;37m\] \n\[\e[0m\]\[\e[01;36m\][\[\e[0m\]\[\e[01;32m\]\d \A\[\e[0m\]\[\e[01;36m\]]\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;31m\]\\$\[\e[0m\]\[\e[01;37m\] \[\e[1;36m\]"
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD/#$HOME/~}\007"'
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD/#$HOME/~}\007"' && while true; do echo -ne "\e[s\e[0;$((COLUMNS-27))H$(date)\e[u"; sleep 1; done &
 
 #export PS1="\[\e[01;31m\]\u\[\e[0m\]\[\e[01;33m\]@\[\e[0m\]\[\e[01;36m\]\h\[\e[0m\]\[\e[01;33m\]:\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;35m\]\w\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;36m\][\[\e[0m\]\[\e[01;32m\]\d \A\[\e[0m\]\[\e[01;36m\]]\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;31m\]\\$\[\e[0m\]\[\e[01;37m\] \[\e[1;36m\]"
 #export PS1="\u@\h: [\d \t] \W $"
