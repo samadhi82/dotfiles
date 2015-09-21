@@ -1,6 +1,6 @@
 # Mitch's custom Bash prompt: Simple Version
-export PS1="\[\e[01;31m\]\u\[\e[0m\]\[\e[01;33m\]@\[\e[0m\]\[\e[01;36m\]\h\[\e[0m\]\[\e[01;33m\]:\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;35m\]\w\[\e[0m\]\[\e[01;37m\] \n\[\e[0m\]\[\e[01;36m\][\[\e[0m\]\[\e[01;32m\]\d \A\[\e[0m\]\[\e[01;36m\]]\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;31m\]\\$\[\e[0m\]\[\e[01;37m\] \[\e[1;36m\]"
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD/#$HOME/~}\007"' && while true; do echo -ne "\e[s\e[0;$((COLUMNS-27))H$(date)\e[u"; sleep 1; done &
+export PS1="\[\e[01;31m\]\u\[\e[0m\]\[\e[01;33m\]@\[\e[0m\]\[\e[01;36m\]\h\[\e[0m\]\[\e[01;33m\]:\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;35m\]\w\[\e[0m\]\[\e[01;37m\] \n\[\e[0m\]\[\e[01;36m\][\[\e[0m\]\[\e[01;32m\]\d \T\[\e[0m\]\[\e[01;36m\]]\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;31m\]\\$\[\e[0m\]\[\e[01;37m\] \[\e[1;36m\]"
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD/#$HOME/~}\007"'
 
 #export PS1="\[\e[01;31m\]\u\[\e[0m\]\[\e[01;33m\]@\[\e[0m\]\[\e[01;36m\]\h\[\e[0m\]\[\e[01;33m\]:\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;35m\]\w\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;36m\][\[\e[0m\]\[\e[01;32m\]\d \A\[\e[0m\]\[\e[01;36m\]]\[\e[0m\]\[\e[01;37m\] \[\e[0m\]\[\e[01;31m\]\\$\[\e[0m\]\[\e[01;37m\] \[\e[1;36m\]"
 #export PS1="\u@\h: [\d \t] \W $"
@@ -14,6 +14,9 @@ alias ping="ping -c 5"
 alias psl="ps -aux"
 alias remlog="history -w && history -c"
 alias rlb="source ~/.bashrc"
+
+# Custom application aliases
+alias man="~/.man.sh"
 
 # System Administration Aliases
 alias clrcache="free && sync && echo 3 > /proc/sys/vm/drop_caches && free"
